@@ -6,9 +6,7 @@ import App from '../../exercise/01'
 
 test('1st exercise', () => {
   render(<App />)
-
   const input = screen.getByRole('textbox', /name/i)
   userEvent.type(input, 'Yaswanth')
-
   expect(screen.getByText(/hello.*yaswanth/i)).toBeInTheDocument()
 })
