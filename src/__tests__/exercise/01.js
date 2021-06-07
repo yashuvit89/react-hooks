@@ -4,6 +4,10 @@ import userEvent from '@testing-library/user-event'
 
 import App from '../../exercise/01'
 
+afterEach(() => {
+  window.localStorage.removeItem('name')
+})
+
 test('1st exercise', () => {
   render(<App />)
   const input = screen.getByRole('textbox', /name/i)
